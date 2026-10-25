@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="design_doc_mode" content="canvas">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&amp;family=Instrument+Sans:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#07070A;-webkit-font-smoothing:antialiased}
+a{color:#E8D5A3;text-decoration:none}a:hover{color:#F5F5F7}
+@keyframes saOverlay{0%{opacity:0}4%{opacity:1}74%{opacity:1}88%{opacity:0}100%{opacity:0}}
+@keyframes saLogoIn{0%,5%{opacity:0;transform:translateY(12px) scale(.97);filter:blur(10px)}26%,100%{opacity:1;transform:none;filter:blur(0)}}
+@keyframes saSweep{0%,26%{transform:translateX(-160%) skewX(-18deg)}50%,100%{transform:translateX(330%) skewX(-18deg)}}
+@keyframes saShimmer{0%,28%{background-position:100% 0}56%,100%{background-position:0 0}}
+@keyframes saTag{0%,32%{opacity:0;transform:translateY(6px)}46%,100%{opacity:1;transform:none}}
+@keyframes saGlow{0%,4%{opacity:0;transform:scale(.85)}34%{opacity:1;transform:scale(1)}100%{opacity:1;transform:scale(1.06)}}
+</style>
+</helmet>
+
+<div style="width:2080px;padding:96px;box-sizing:border-box;background:#07070A;font-family:'Instrument Sans',sans-serif;color:#F5F5F7;display:flex;flex-direction:column;gap:120px">
+
+<header style="display:flex;justify-content:space-between;align-items:flex-end">
+  <div style="display:flex;align-items:center;gap:20px">
+    <img src="assets/logo-symbol-gold.svg" width="56" height="56">
+    <span style="font-family:Sora;font-weight:600;font-size:36px;letter-spacing:-0.04em">Stay Ahead</span>
+  </div>
+  <div style="font-family:'JetBrains Mono';font-size:13px;color:#8E8E9A;display:flex;gap:32px">
+    <span>Identity &amp; screens · v1</span><span>01 Logo · 02 Splash · 03 Welcome · 04 Icons · 05 System</span>
+  </div>
+</header>
+
+<!-- 01 LOGO -->
+<section data-screen-label="01 Logo" style="display:flex;flex-direction:column;gap:24px">
+  <div style="display:flex;align-items:baseline;gap:20px;border-top:1px solid rgba(255,255,255,.08);padding-top:32px;margin-bottom:24px">
+    <span style="font-family:'JetBrains Mono';font-size:14px;color:#B8956A">01</span>
+    <h2 style="font-family:Sora;font-weight:600;font-size:44px;letter-spacing:-0.04em;margin:0">Logo</h2>
+    <span style="color:#8E8E9A;font-size:16px">A page with a folded corner and two written lines. Built on a 32px grid so it holds at 16px.</span>
+  </div>
+
+  <div style="display:grid;grid-template-columns:6fr 3fr 3fr;gap:24px">
+    <div style="position:relative;height:400px;border-radius:24px;background:#0B0B0F;border:1px solid rgba(255,255,255,.08);box-shadow:inset 0 1px 0 rgba(255,255,255,.05);overflow:hidden;display:flex;align-items:center;justify-content:center">
+      <div style="position:absolute;width:640px;height:640px;border-radius:50%;background:radial-gradient(closest-side,rgba(232,213,163,.12),rgba(11,11,15,0))"></div>
+      <div style="position:relative;display:flex;align-items:center;gap:26px">
+        <img src="assets/logo-symbol-gold.svg" width="96" height="96">
+        <span style="font-family:Sora;font-weight:600;font-size:64px;letter-spacing:-0.045em;line-height:1">Stay Ahead</span>
+      </div>
+      <span style="position:absolute;left:28px;bottom:24px;font-family:'JetBrains Mono';font-size:12px;color:#8E8E9A">Primary lockup · symbol + wordmark</span>
+    </div>
+    <div style="position:relative;height:400px;border-radius:24px;background:#111116;border:1px solid rgba(255,255,255,.08);box-shadow:inset 0 1px 0 rgba(255,255,255,.05);display:flex;align-items:center;justify-content:center">
+      <img src="assets/logo-symbol-gold.svg" width="128" height="128">
+      <span style="position:absolute;left:28px;bottom:24px;font-family:'JetBrains Mono';font-size:12px;color:#8E8E9A">Symbol only</span>
+    </div>
+    <div style="position:relative;height:400px;border-radius:24px;background:#111116;border:1px solid rgba(255,255,255,.08);box-shadow:inset 0 1px 0 rgba(255,255,255,.05);display:flex;align-items:center;justify-content:center">
+      <span style="font-family:Sora;font-weight:600;font-size:44px;letter-spacing:-0.045em">Stay Ahead</span>
+      <span style="position:absolute;left:28px;bottom:24px;font-family:'JetBrains Mono';font-size:12px;color:#8E8E9A">Wordmark only · Sora 600, −4.5%</span>
+    </div>
+  </div>
+
+  <div style="display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:24px">
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <div style="height:220px;border-radius:24px;background:#0B0B0F;border:1px solid rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;gap:14px">
+        <img src="assets/logo-symbol-gold.svg" width="44" height="44"><span style="font-family:Sora;font-weight:600;font-size:28px;letter-spacing:-0.045em;color:#F5F5F7">Stay Ahead</span>
+      </div>
+      <span style="font-family:'JetBrains Mono';font-size:12px;color:#8E8E9A">Dark background</span>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <div style="height:220px;border-radius:24px;background:#F5F3EE;display:flex;align-items:center;justify-content:center;gap:14px">
+        <img src="assets/logo-symbol-bronze.svg" width="44" height="44"><span style="font-family:Sora;font-weight:600;font-size:28px;letter-spacing:-0.045em;color:#0B0B0F">Stay Ahead</span>
+      </div>
+      <span style="font-family:'JetBrains Mono';font-size:12px;color:#8E8E9A">Light background · bronze symbol</span>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <div style="height:220px;border-radius:24px;background:#24242D;border:1px solid rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;gap:14px">
+        <img src="assets/logo-symbol-white.svg" width="44" height="44"><span style="font-family:Sora;font-weight:600;font-size:28px;letter-spacing:-0.045em;color:#F5F5F7">Stay Ahead</span>
+      </div>
+      <span style="font-family:'JetBrains Mono';font-size:12px;color:#8E8E9A">Single color · white</span>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <div style="height:220px;border-radius:24px;background:#E6E4DF;display:flex;align-items:center;justify-content:center;gap:14px">
+        <img src="assets/logo-symbol-black.svg" width="44" height="44"><span style="font-family:Sora;font-weight:600;font-size:28px;letter-spacing:-0.045em;color:#0B0B0F">Stay Ahead</span>
+      </div>
+      <span style="font-family:'JetBrains Mono';font-size:12px;color:#8E8E9A">Single color · black</span>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:12px">
+      <div style="height:220px;border-radius:24px;background:#111116;border:1px solid rgba(232,213,163,.18);display:flex;align-items:center;justify-content:center;gap:14px">
+        <img src="assets/logo-symbol-gold.svg" width="44" height="44"><span style="font-family:Sora;font-weight:600;font-size:28px;letter-spacing:-0.045em;background:linear-gradient(135deg,#E8D5A3,#B8956A);-webkit-background-clip:text;background-clip:text;color:transparent">Stay Ahead</span>
+      </div>
+      <span style="font-family:'JetBrains Mono';font-size:12px;color:#8E8E9A">Gold accent · launch, splash, marketing</span>
+    </div>
+  </div>
+
+  <div style="display:grid;grid-template-columns:7fr 5fr;gap:24px">
+    <div style="position:relative;height:380px;border-radius:24px;background:#111116;border:1px solid rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center">
+      <div style="position:relative;padding:32px;border:1px dashed rgba(232,213,163,.45);border-radius:4px">
+        <div style="position:absolute;inset:32px;background:rgba(232,213,163,.04);outline:1px solid rgba(232,213,163,.15)"></div>
+        <div style="position:relative;display:flex;align-items:center;gap:20px">
+          <img src="assets/logo-symbol-gold.svg" width="64" height="64">
+          <span style="font-family:Sora;font-weight:600;font-size:42px;letter-spacing:-0.045em">Stay Ahead</span>
+        </div>
+        <span style="position:absolute;top:8px;left:50%;font-family:'JetBrains Mono';font-size:12px;color:#E8D5A3">x</span>
+        <span style="position:absolute;bottom:8px;left:50%;font-family:'JetBrains Mono';font-size:12px;color:#E8D5A3">x</span>
+        <span style="position:absolute;left:12px;top:50%;margin-top:-8px;font-family:'JetBrains Mono';font-size:12px;color:#E8D5A3">x</span>
+        <span style="position:absolute;right:12px;top:50%;margin-top:-8px;font-family:'JetBrains Mono';font-size:12px;color:#E8D5A3">x</span>
+      </div>
+      <span style="position:absolute;left:28px;bottom:24px;font-family:'JetBrains Mono';font-size:12px;color:#8E8E9A">Clear space · x = ½ symbol height on all sides. Keep other elements outside the dashed line.</span>
+    </div>
+    <div style="position:relative;height:380px;border-radius:24px;background:#111116;border:1px solid rgba(255,255,255,.08);padding:40px;box-sizing:border-box;display:flex;flex-direction:column;gap:36px">
+      <div style="display:flex;align-items:flex-end;gap:32px">
+        <div style="display:flex;flex-direction:column;align-items:center;gap:10px"><img src="assets/logo-symbol-gold.svg" width="16" height="16"><span style="font-family:'JetBrains Mono';font-size:11px;color:#E8D5A3">16</span></div>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:10px"><img src="assets/logo-symbol-gold.svg" width="20" height="20"><span style="font-family:'JetBrains Mono';font-size:11px;color:#8E8E9A">20</span></div>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:10px"><img src="assets/logo-symbol-gold.svg" width="24" height="24"><span style="font-family:'JetBrains Mono';font-size:11px;color:#8E8E9A">24</span></div>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:10px"><img src="assets/logo-symbol-gold.svg" width="32" height="32"><span style="font-family:'JetBrains Mono';font-size:11px;color:#8E8E9A">32</span></div>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:10px"><img src="assets/logo-symbol-gold.svg" width="48" height="48"><span style="font-family:'JetBrains Mono';font-size:11px;color:#8E8E9A">48</span></div>
+      </div>
+      <div style="display:flex;align-items:center;gap:24px">
+        <div style="display:flex;align-items:center;gap:6px;width:96px;border-right:1px dashed rgba(232,213,163,.45);border-left:1px dashed rgba(232,213,163,.45);padding:6px 0;justify-content:center">
+          <img src="assets/logo-symbol-gold.svg" width="16" height="16"><span style="font-family:Sora;font-weight:600;font-size:12px;letter-spacing:-0.03em">Stay Ahead</span>
+        </div>
+        <span style="font-family:'JetBrains Mono';font-size:11px;color:#E8D5A3">96px · lockup minimum</span>
+      </div>
+      <span style="position:absolute;left:40px;bottom:24px;font-family:'JetBrains Mono';font-size:12px;color:#8E8E9A;line-height:1.6">Symbol minimum 16px. Below 96px wide, use the symbol alone.</span>
+    </div>
+  </div>
+</section>
+
+<!-- 02 SPLASH -->
+<section data-screen-label="02 Splash" style="display:flex;flex-direction:column;gap:24px">
+  <div style="display:flex;align-items:baseline;gap:20px;border-top:1px solid rgba(255,255,255,.08);padding-top:32px;margin-bottom:24px">
+    <span style="font-family:'JetBrains Mono';font-size:14px;color:#B8956A">02</span>
+    <h2 style="font-family:Sora;font-weight:600;font-size:44px;letter-spacing:-0.04em;margin:0">Splash</h2>
+    <span style="color:#8E8E9A;font-size:16px">Logo resolves from blur, a gold sweep crosses the symbol and wordmark, then the splash fades into the app. Loops here for review.</span>
+  </div>
+  <div style="display:flex;gap:56px;align-items:flex-start">
+    <div style="display:flex;flex-direction:column;gap:14px">
+      <span style="font-family:'JetBrains Mono';font-size:12px;color:#8E8E9A">Desktop · 1440 × 900</span>
+      <div data-screen-label="Splash desktop" style="position:relative;width:1440px;height:900px;border-radius:24px;overflow:hidden;border:1px solid rgba(255,255,255,.08);background:#0B0B0F">
+        <div style="position:absolute;inset:0;display:grid;grid-template-columns:264px 360px minmax(0,1fr)">
+          <aside style="background:#111116;border-right:1px solid rgba(255,255,255,.06);padding:28px 20px;display:flex;flex-direction:column;gap:28px">
+            <div style="display:flex;align-items:center;gap:10px;padding:0 8px"><img src="assets/logo-symbol-gold.svg" width="24" height="24"><span style="font-family:Sora;font-weight:600;font-size:16px;letter-spacing:-0.03em">Stay Ahead</span></div>
+            <div style="display:flex;align-items:center;justify-content:center;gap:8px;height:44px;border-radius:14px;background:linear-gradient(135deg,#E8D5A3,#B8956A);color:#16130D;font-weight:600;font-size:14px;box-shadow:inset 0 1px 0 rgba(255,255,255,.45)"><img src="icons/icon-new-note.svg" width="18" height="18">New note</div>
+            <div style="display:flex;flex-direction:column;gap:2px">
+              <div style="display:flex;align-items:center;gap:12px;height:40px;padding:0 12px;border-radius:12px;background:#1A1A21;box-shadow:inset 0 1px 0 rgba(255,255,255,.05);font-size:14px"><img src="icons/icon-empty-state.svg" width="18" height="18" style="filter:invert(.96)"><span style="flex:1">All notes</span><span style="font-size:12px;color:#8E8E9A">24</span></div>
+              <div style="display:flex;align-items:center;gap:12px;height:40px;padding:0 12px;border-radius:12px;font-size:14px;color:#8E8E9A"><img src="icons/icon-pin.svg" width="18" height="18" style="filter:invert(.6)"><span style="flex:1">Pinned</span><span style="font-size:12px">3</span></div>
+              <div style="display:flex;align-items:center;gap:12px;height:40px;padding:0 12px;border-radius:12px;font-size:14px;color:#8E8E9A"><img src="icons/icon-search.svg" width="18" height="18" style="filter:invert(.6)"><span style="flex:1">Search</span><span style="font-family:'JetBrains Mono';font-size:11px">⌘K</span></div>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:2px">
+              <span style="font-size:11px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:#5E5E69;padding:0 12px 8px">Folders</span>
+              <div style="display:flex;align-items:center;gap:12px;height:40px;padding:0 12px;border-radius:12px;font-size:14px;color:#8E8E9A"><img src="icons/icon-folder.svg" width="18" height="18" style="filter:invert(.6)"><span style="flex:1">Work</span><span style="font-size:12px">9</span></div>
+              <div style="display:flex;align-items:center;gap:12px;height:40px;padding:0 12px;border-radius:12px;font-size:14px;color:#8E8E9A"><img src="icons/icon-folder.svg" width="18" height="18" style="filter:invert(.6)"><span style="flex:1">Personal</span><span style="font-size:12px">11</span></div>
+              <div style="display:flex;align-items:center;gap:12px;height:40px;padding:0 12px;border-radius:12px;font-size:14px;color:#8E8E9A"><img src="icons/icon-folder.svg" width="18" height="18" style="filter:invert(.6)"><span style="flex:1">Reading</span><span style="font-size:12px">4</span></div>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:2px">
+              <span style="font-size:11px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:#5E5E69;padding:0 12px 8px">Tags</span>
+              <div style="display:flex;align-items:center;gap:12px;height:40px;padding:0 12px;border-radius:12px;font-size:14px;color:#8E8E9A"><img src="icons/icon-tag.svg" width="18" height="18" style="filter:invert(.6)"><span>ideas</span></div>
+              <div style="display:flex;align-items:center;gap:12px;height:40px;padding:0 12px;border-radius:12px;font-size:14px;color:#8E8E9A"><img src="icons/icon-tag.svg" width="18" height="18" style="filter:invert(.6)"><span>drafts</span></div>
+            </div>
+            <div style="margin-top:auto;display:flex;flex-direction:column;gap:10px;padding:16px;border-radius:16px;background:#1A1A21;border:1px solid rgba(255,255,255,.06)">
+              <span style="font-size:12px;color:#8E8E9A">Stored on this device</span>
+              <div style="height:4px;border-radius:4px;background:#24242D"><div style="width:21%;height:4px;border-radius:4px;background:linear-gradient(90deg,#E8D5A3,#B8956A)"></div></div>
+              <span style="font-size:12px;color:#F5F5F7">2.1 MB <span style="color:#8E8E9A">of 10 MB</span></span>
+            </div>
+          </aside>
+          <section style="border-right:1px solid rgba(255,255,255,.06);padding:28px 20px;display:flex;flex-direction:column;gap:20px">
+            <div style="display:flex;justify-content:space-between;align-items:center;padding:0 4px"><span style="font-family:Sora;font-weight:600;font-size:22px;letter-spacing:-0.03em">All notes</span><img src="icons/icon-sort.svg" width="20" height="20" style="filter:invert(.6)"></div>
+            <div style="display:flex;align-items:center;gap:10px;height:44px;padding:0 14px;border-radius:14px;background:#1A1A21;border:1px solid rgba(255,255,255,.08);color:#8E8E9A;font-size:14px"><img src="icons/icon-search.svg" width="18" height="18" style="filter:invert(.6)">Search notes</div>
+            <div style="display:flex;flex-direction:column;gap:8px">
+              <div style="padding:16px;border-radius:18px;background:#1A1A21;border:1px solid rgba(232,213,163,.22);box-shadow:inset 0 1px 0 rgba(255,255,255,.06);display:flex;flex-direction:column;gap:6px"><span style="font-weight:600;font-size:15px">Q4 planning</span><span style="font-size:13px;line-height:1.5;color:#8E8E9A">Draft the roadmap review and collect open questions before Thursday.</span><span style="font-size:12px;color:#5E5E69">Work · 2 min ago</span></div>
+              <div style="padding:16px;border-radius:18px;display:flex;flex-direction:column;gap:6px"><span style="font-weight:600;font-size:15px">Reading list</span><span style="font-size:13px;line-height:1.5;color:#8E8E9A">The Overstory, Thinking in Systems, and a few essays on attention.</span><span style="font-size:12px;color:#5E5E69">Reading · Yesterday</span></div>
+              <div style="padding:16px;border-radius:18px;display:flex;flex-direction:column;gap:6px"><span style="font-weight:600;font-size:15px">Kitchen renovation</span><span style="font-size:13px;line-height:1.5;color:#8E8E9A">Counter measurements and the two quotes from Tuesday.</span><span style="font-size:12px;color:#5E5E69">Personal · Mon</span></div>
+              <div style="padding:16px;border-radius:18px;display:flex;flex-direction:column;gap:6px"><span style="font-weight:600;font-size:15px">Newsletter ideas</span><span style="font-size:13px;line-height:1.5;color:#8E8E9A">Short weekly notes on tools I actually use.</span><span style="font-size:12px;color:#5E5E69">ideas · Oct 18</span></div>
+            </div>
+          </section>
+          <main style="padding:24px 64px;display:flex;flex-direction:column;gap:48px">
+            <div style="display:flex;align-items:center;justify-content:space-between">
+              <div style="display:flex;align-items:center;gap:4px;padding:4px;border-radius:14px;background:#111116;border:1px solid rgba(255,255,255,.06)">
+                <span style="width:36px;height:36px;display:flex;align-items:center;justify-content:center"><img src="icons/icon-bold.svg" width="18" height="18" style="filter:invert(.6)"></span>
+                <span style="width:36px;height:36px;display:flex;align-items:center;justify-content:center"><img src="icons/icon-italic.svg" width="18" height="18" style="filter:invert(.6)"></span>
+                <span style="width:36px;height:36px;display:flex;align-items:center;justify-content:center;border-radius:10px;background:#24242D"><img src="icons/icon-heading.svg" width="18" height="18" style="filter:invert(.96)"></span>
+                <span style="width:36px;height:36px;display:flex;align-items:center;justify-content:center"><img src="icons/icon-bullet-list.svg" width="18" height="18" style="filter:invert(.6)"></span>
+                <span style="width:36px;height:36px;display:flex;align-items:center;justify-content:center"><img src="icons/icon-numbered-list.svg" width="18" height="18" style="filter:invert(.6)"></span>
+                <span style="width:36px;height:36px;display:flex;align-items:center;justify-content:center"><img src="icons/icon-code.svg" width="18" height="18" style="filter:invert(.6)"></span>
+                <span style="width:36px;height:36px;display:flex;align-items:center;justify-content:center"><img src="icons/icon-link.svg" width="18" height="18" style="filter:invert(.6)"></span>
+                <span style="width:36px;height:36px;display:flex;align-items:center;justify-content:center"><img src="icons/icon-image.svg" width="18" height="18" style="filter:invert(.6)"></span>
+                <span style="width:1px;height:20px;background:rgba(255,255,255,.08);margin:0 4px"></span>
+                <span style="width:36px;height:36px;display:flex;align-items:center;justify-content:center"><img src="icons/icon-undo.svg" width="18" height="18" style="filter:invert(.6)"></span>
+                <span style="width:36px;height:36px;display:flex;align-items:center;justify-content:center"><img src="icons/icon-redo.svg" width="18" height="18" style="filter:invert(.6)"></span>
+              </div>
+              <div style="display:flex;align-items:center;gap:20px;font-size:13px;color:#8E8E9A">
+                <span style="display:flex;align-items:center;gap:6px"><img src="icons/icon-saved.svg" width="16" height="16" style="filter:invert(.6)">Saved locally</span>
+                <img src="icons/icon-export.svg" width="20" height="20" style="filter:invert(.6)">
+                <img src="icons/icon-more.svg" width="20" height="20" style="filter:invert(.6)">
+              </div>
+            </div>
+            <article style="max-width:680px;display:flex;flex-direction:column;gap:20px">
+              <span style="font-size:13px;color:#8E8E9A">Work · Edited 2 minutes ago</span>
+              <h1 style="font-family:Sora;font-weight:600;font-size:48px;letter-spacing:-0.04em;line-height:1.05;margin:0">Q4 planning</h1>
+              <p style="font-size:17px;line-height:1.7;color:#C9C9D1;margin:0;text-wrap:pretty">Draft the roadmap review and collect open questions before Thursday. Keep the first version short: three priorities, what we are dropping, and the one risk worth discussing.</p>
+              <h3 style="font-family:Sora;font-weight:600;font-size:22px;letter-spacing:-0.02em;margin:16px 0 0">Open questions</h3>
+              <ul style="margin:0;padding-left:20px;font-size:17px;line-height:1.9;color:#C9C9D1">
+                <li>Which launch moves to January?</li>
+                <li>Who owns the migration guide?</li>
+                <li>Do we need a second design review?</li>
+              </ul>
+            </article>
+          </main>
+        </div>
+        {{ splashDesktop }}
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:14px">
+      <span style="font-family:'JetBrains Mono';font-size:12px;color:#8E8E9A">Mobile · 390 × 844</span>
+      <div data-screen-label="Splash mobile" style="position:relative;width:390px;height:844px;border-radius:32px;overflow:hidden;border:1px solid rgba(255,255,255,.08);background:#0B0B0F">
+        <div style="position:absolute;inset:0;padding:56px 20px 0;display:flex;flex-direction:column;gap:20px">
+          <div style="display:flex;justify-content:space-between;align-items:center;height:44px">
+            <img src="icons/icon-menu.svg" width="24" height="24" style="filter:invert(.96)">
+            <img src="assets/logo-symbol-gold.svg" width="24" height="24">
+            <img src="icons/icon-search.svg" width="24" height="24" style="filter:invert(.96)">
+          </div>
+          <span style="font-family:Sora;font-weight:600;font-size:34px;letter-spacing:-0.04em;padding-top:8px">All notes</span>
+          <div style="display:flex;gap:8px">
+            <span style="height:36px;padding:0 16px;display:flex;align-items:center;border-radius:999px;background:#F5F5F7;color:#0B0B0F;font-size:14px;font-weight:500">All</span>
+            <span style="height:36px;padding:0 16px;display:flex;align-items:center;border-radius:999px;border:1px solid rgba(255,255,255,.1);color:#8E8E9A;font-size:14px">Work</span>
+            <span style="height:36px;padding:0 16px;display:flex;align-items:center;border-radius:999px;border:1px solid rgba(255,255,255,.1);color:#8E8E9A;font-size:14px">Personal</span>
+            <span style="height:36px;padding:0 16px;display:flex;align-items:center;border-radius:999px;border:1px solid rgba(255,255,255,.1);color:#8E8E9A;font-size:14px">Reading</span>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:10px">
+            <div style="padding:18px;border-radius:20px;background:#1A1A21;border:1px solid rgba(255,255,255,.08);box-shadow:inset 0 1px 0 rgba(255,255,255,.06);display:flex;flex-direction:column;gap:6px"><span style="display:flex;justify-content:space-between;font-weight:600;font-size:16px">Q4 planning<img src="icons/icon-pin.svg" width="16" height="16" style="filter:invert(.6)"></span><span style="font-size:14px;line-height:1.5;color:#8E8E9A">Draft the roadmap review and collect open questions before Thursday.</span><span style="font-size:12px;color:#5E5E69">Work · 2 min ago</span></div>
+            <div style="padding:18px;border-radius:20px;background:#1A1A21;border:1px solid rgba(255,255,255,.08);box-shadow:inset 0 1px 0 rgba(255,255,255,.06);display:flex;flex-direction:column;gap:6px"><span style="font-weight:600;font-size:16px">Reading list</span><span style="font-size:14px;line-height:1.5;color:#8E8E9A">The Overstory, Thinking in Systems, and a few essays on attention.</span><span style="font-size:12px;color:#5E5E69">Reading · Yesterday</span></div>
+            <div style="padding:18px;border-radius:20px;background:#1A1A21;border:1px solid rgba(255,255,255,.08);box-shadow:inset 0 1px 0 rgba(255,255,255,.06);display:flex;flex-direction:column;gap:6px"><span style="font-weight:600;font-size:16px">Kitchen renovation</span><span style="font-size:14px;line-height:1.5;color:#8E8E9A">Counter measurements and the two quotes from Tuesday.</span><span style="font-size:12px;color:#5E5E69">Personal · Mon</span></div>
+          </div>
+        </div>
+        <div style="position:absolute;right:20px;bottom:36px;width:60px;height:60px;border-radius:20px;background:linear-gradient(135deg,#E8D5A3,#B8956A);display:flex;align-items:center;justify-content:center;box-shadow:inset 0 1px 0 rgba(255,255,255,.45),0 12px 32px -10px rgba(232,213,163,.4)"><img src="icons/icon-new-note.svg" width="24" height="24"></div>
+        {{ splashMobile }}
+      </div>
+    </div>
+  </div>
+  <div style="display:grid;grid-template-columns:26fr 24fr 24fr 14fr 12fr;max-width:1440px;font-family:'JetBrains Mono';font-size:11px;color:#8E8E9A">
+    <div style="border-top:2px solid #E8D5A3;padding-top:10px">0–1.8s · logo resolves from blur</div>
+    <div style="border-top:2px solid #B8956A;padding-top:10px">1.8–3.5s · gold sweep</div>
+    <div style="border-top:2px solid #5E5E69;padding-top:10px">3.5–5.2s · hold, tagline visible</div>
+    <div style="border-top:2px solid #24242D;padding-top:10px">5.2–6.2s · fade into app</div>
+    <div style="border-top:2px solid #1A1A21;padding-top:10px">ease 0.22, 1, 0.36, 1</div>
+  </div>
+</section>
+
+<!-- 03 WELCOME -->
+<section data-screen-label="03 Welcome" style="display:flex;flex-direction:column;gap:24px">
+  <div style="display:flex;align-items:baseline;gap:20px;border-top:1px solid rgba(255,255,255,.08);padding-top:32px;margin-bottom:24px">
+    <span style="font-family:'JetBrains Mono';font-size:14px;color:#B8956A">03</span>
+    <h2 style="font-family:Sora;font-weight:600;font-size:44px;letter-spacing:-0.04em;margin:0">Welcome</h2>
+    <span style="color:#8E8E9A;font-size:16px">First run. A glass card over a faint preview of the editor.</span>
+  </div>
+  <div style="display:flex;gap:56px;align-items:flex-start">
+    <div style="display:flex;flex-direction:column;gap:14px">
+      <span style="font-family:'JetBrains Mono';font-size:12px;color:#8E8E9A">Desktop · 1440 × 900</span>
+      <div data-screen-label="Welcome desktop" style="position:relative;width:1440px;height:900px;border-radius:24px;overflow:hidden;border:1px solid rgba(255,255,255,.08);background:#0B0B0F;display:flex;align-items:center;justify-content:center">
+        <div style="position:absolute;left:160px;right:160px;top:96px;height:760px;border-radius:24px;background:#111116;border:1px solid rgba(255,255,255,.08);opacity:.5;display:grid;grid-template-columns:240px minmax(0,1fr);overflow:hidden;mask-image:linear-gradient(180deg,#000 30%,rgba(0,0,0,0) 95%);-webkit-mask-image:linear-gradient(180deg,#000 30%,rgba(0,0,0,0) 95%)">
+          <div style="border-right:1px solid rgba(255,255,255,.06);padding:28px 20px;display:flex;flex-direction:column;gap:14px">
+            <div style="height:24px;width:120px;border-radius:8px;background:#24242D"></div>
+            <div style="height:40px;border-radius:12px;background:linear-gradient(135deg,rgba(232,213,163,.5),rgba(184,149,106,.5));margin-bottom:12px"></div>
+            <div style="height:12px;width:150px;border-radius:6px;background:#24242D"></div>
+            <div style="height:12px;width:110px;border-radius:6px;background:#1A1A21"></div>
+            <div style="height:12px;width:130px;border-radius:6px;background:#1A1A21"></div>
+            <div style="height:12px;width:90px;border-radius:6px;background:#1A1A21"></div>
+          </div>
+          <div style="padding:40px 72px;display:flex;flex-direction:column;gap:16px">
+            <div style="height:36px;width:380px;border-radius:12px;background:#1A1A21;margin-bottom:24px"></div>
+            <div style="height:40px;width:340px;border-radius:10px;background:#24242D;margin-bottom:8px"></div>
+            <div style="height:12px;width:78%;border-radius:6px;background:#1A1A21"></div>
+            <div style="height:12px;width:84%;border-radius:6px;background:#1A1A21"></div>
+            <div style="height:12px;width:62%;border-radius:6px;background:#1A1A21"></div>
+            <div style="height:20px;width:200px;border-radius:8px;background:#24242D;margin-top:20px"></div>
+            <div style="height:12px;width:54%;border-radius:6px;background:#1A1A21"></div>
+            <div style="height:12px;width:48%;border-radius:6px;background:#1A1A21"></div>
+          </div>
+        </div>
+        <div style="position:absolute;width:900px;height:900px;border-radius:50%;background:radial-gradient(closest-side,rgba(232,213,163,.10),rgba(11,11,15,0))"></div>
+        <div style="position:relative;width:640px;padding:56px 56px 40px;box-sizing:border-box;border-radius:28px;background:rgba(26,26,33,.6);backdrop-filter:blur(28px);-webkit-backdrop-filter:blur(28px);border:1px solid rgba(255,255,255,.1);box-shadow:inset 0 1px 0 rgba(255,255,255,.08),0 40px 120px -40px rgba(0,0,0,.8);display:flex;flex-direction:column;align-items:center;text-align:center">
+          <img src="assets/logo-symbol-gold.svg" width="48" height="48">
+          <h1 style="font-family:Sora;font-weight:600;font-size:48px;line-height:1.06;letter-spacing:-0.045em;margin:32px 0 0;text-wrap:balance">Write it down before it slips away.</h1>
+          <p style="font-size:17px;line-height:1.6;color:#8E8E9A;margin:16px 0 0">A focused notebook in your browser. Everything stays on this device.</p>
+          <div style="display:flex;flex-direction:column;align-items:center;gap:18px;margin-top:36px">
+            <div style="height:56px;padding:0 36px;display:flex;align-items:center;gap:10px;border-radius:18px;background:linear-gradient(135deg,#E8D5A3,#B8956A);color:#16130D;font-weight:600;font-size:16px;box-shadow:inset 0 1px 0 rgba(255,255,255,.45),0 12px 32px -12px rgba(232,213,163,.45);cursor:pointer;transition:filter .4s cubic-bezier(.22,1,.36,1)" style-hover="filter:brightness(1.06)">Start writing</div>
+            <a href="#" style="font-size:14px;color:#8E8E9A;display:flex;align-items:center;gap:8px"><img src="icons/icon-import.svg" width="16" height="16" style="filter:invert(.6)">Import a backup</a>
+          </div>
+          <div style="align-self:stretch;margin-top:44px;padding-top:28px;border-top:1px solid rgba(255,255,255,.08);display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;text-align:left">
+            <div style="display:flex;flex-direction:column;gap:8px">
+              <span style="width:20px;height:20px;background:linear-gradient(135deg,#E8D5A3,#B8956A);mask:url(icons/icon-new-note.svg) center/20px no-repeat;-webkit-mask:url(icons/icon-new-note.svg) center/20px no-repeat"></span>
+              <span style="font-weight:600;font-size:14px;margin-top:4px"><span style="font-family:'JetBrains Mono';font-weight:400;color:#B8956A;font-size:12px">01 </span>Write</span>
+              <span style="font-size:13px;line-height:1.5;color:#8E8E9A">A quiet editor with Markdown shortcuts.</span>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:8px">
+              <span style="width:20px;height:20px;background:linear-gradient(135deg,#E8D5A3,#B8956A);mask:url(icons/icon-folders.svg) center/20px no-repeat;-webkit-mask:url(icons/icon-folders.svg) center/20px no-repeat"></span>
+              <span style="font-weight:600;font-size:14px;margin-top:4px"><span style="font-family:'JetBrains Mono';font-weight:400;color:#B8956A;font-size:12px">02 </span>Organize</span>
+              <span style="font-size:13px;line-height:1.5;color:#8E8E9A">Folders, tags and pins keep notes close.</span>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:8px">
+              <span style="width:20px;height:20px;background:linear-gradient(135deg,#E8D5A3,#B8956A);mask:url(icons/icon-export.svg) center/20px no-repeat;-webkit-mask:url(icons/icon-export.svg) center/20px no-repeat"></span>
+              <span style="font-weight:600;font-size:14px;margin-top:4px"><span style="font-family:'JetBrains Mono';font-weight:400;color:#B8956A;font-size:12px">03 </span>Export</span>
+              <span style="font-size:13px;line-height:1.5;color:#8E8E9A">Back up to Markdown or JSON anytime.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:14px">
+      <span style="font-family:'JetBrains Mono';font-size:12px;color:#8E8E9A">Mobile · 390 × 844</span>
+      <div data-screen-label="Welcome mobile" style="position:relative;width:390px;height:844px;border-radius:32px;overflow:hidden;border:1px solid rgba(255,255,255,.08);background:#0B0B0F">
+        <div style="position:absolute;left:20px;right:20px;top:64px;height:480px;border-radius:24px;background:#111116;border:1px solid rgba(255,255,255,.08);opacity:.5;padding:24px;box-sizing:border-box;display:flex;flex-direction:column;gap:14px;mask-image:linear-gradient(180deg,#000 30%,rgba(0,0,0,0) 90%);-webkit-mask-image:linear-gradient(180deg,#000 30%,rgba(0,0,0,0) 90%)">
+          <div style="display:flex;justify-content:space-between"><div style="height:20px;width:20px;border-radius:6px;background:#24242D"></div><div style="height:20px;width:20px;border-radius:6px;background:#24242D"></div></div>
+          <div style="height:30px;width:180px;border-radius:10px;background:#24242D;margin-top:12px"></div>
+          <div style="height:12px;width:90%;border-radius:6px;background:#1A1A21"></div>
+          <div style="height:12px;width:80%;border-radius:6px;background:#1A1A21"></div>
+          <div style="height:12px;width:60%;border-radius:6px;background:#1A1A21"></div>
+          <div style="height:18px;width:130px;border-radius:8px;background:#24242D;margin-top:14px"></div>
+          <div style="height:12px;width:70%;border-radius:6px;background:#1A1A21"></div>
+        </div>
+        <div style="position:absolute;left:-100px;right:-100px;top:120px;height:560px;border-radius:50%;background:radial-gradient(closest-side,rgba(232,213,163,.10),rgba(11,11,15,0))"></div>
+        <div style="position:absolute;left:12px;right:12px;bottom:12px;padding:36px 24px 28px;border-radius:28px;background:rgba(26,26,33,.62);backdrop-filter:blur(28px);-webkit-backdrop-filter:blur(28px);border:1px solid rgba(255,255,255,.1);box-shadow:inset 0 1px 0 rgba(255,255,255,.08);display:flex;flex-direction:column">
+          <img src="assets/logo-symbol-gold.svg" width="40" height="40">
+          <h1 style="font-family:Sora;font-weight:600;font-size:34px;line-height:1.08;letter-spacing:-0.045em;margin:24px 0 0;text-wrap:balance">Write it down before it slips away.</h1>
+          <p style="font-size:16px;line-height:1.55;color:#8E8E9A;margin:12px 0 0">A focused notebook in your browser. Everything stays on this device.</p>
+          <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin-top:28px">
+            <div style="padding:14px 12px;border-radius:16px;background:rgba(36,36,45,.6);border:1px solid rgba(255,255,255,.06);display:flex;flex-direction:column;gap:10px">
+              <span style="width:20px;height:20px;background:linear-gradient(135deg,#E8D5A3,#B8956A);mask:url(icons/icon-new-note.svg) center/20px no-repeat;-webkit-mask:url(icons/icon-new-note.svg) center/20px no-repeat"></span>
+              <span style="font-weight:600;font-size:14px">Write</span>
+            </div>
+            <div style="padding:14px 12px;border-radius:16px;background:rgba(36,36,45,.6);border:1px solid rgba(255,255,255,.06);display:flex;flex-direction:column;gap:10px">
+              <span style="width:20px;height:20px;background:linear-gradient(135deg,#E8D5A3,#B8956A);mask:url(icons/icon-folders.svg) center/20px no-repeat;-webkit-mask:url(icons/icon-folders.svg) center/20px no-repeat"></span>
+              <span style="font-weight:600;font-size:14px">Organize</span>
+            </div>
+            <div style="padding:14px 12px;border-radius:16px;background:rgba(36,36,45,.6);border:1px solid rgba(255,255,255,.06);display:flex;flex-direction:column;gap:10px">
+              <span style="width:20px;height:20px;background:linear-gradient(135deg,#E8D5A3,#B8956A);mask:url(icons/icon-export.svg) center/20px no-repeat;-webkit-mask:url(icons/icon-export.svg) center/20px no-repeat"></span>
+              <span style="font-weight:600;font-size:14px">Export</span>
+            </div>
+          </div>
+          <div style="height:56px;margin-top:24px;display:flex;align-items:center;justify-content:center;border-radius:18px;background:linear-gradient(135deg,#E8D5A3,#B8956A);color:#16130D;font-weight:600;font-size:16px;box-shadow:inset 0 1px 0 rgba(255,255,255,.45),0 12px 32px -12px rgba(232,213,163,.45)">Start writing</div>
+          <a href="#" style="align-self:center;height:44px;display:flex;align-items:center;gap:8px;margin-top:8px;font-size:14px;color:#8E8E9A"><img src="icons/icon-import.svg" width="16" height="16" style="filter:invert(.6)">Import a backup</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 04 ICONS -->
+<section data-screen-label="04 Icons" style="display:flex;flex-direction:column;gap:24px">
+  <div style="display:flex;align-items:baseline;gap:20px;border-top:1px solid rgba(255,255,255,.08);padding-top:32px;margin-bottom:24px">
+    <span style="font-family:'JetBrains Mono';font-size:14px;color:#B8956A">04</span>
+    <h2 style="font-family:Sora;font-weight:600;font-size:44px;letter-spacing:-0.04em;margin:0">Icons &amp; assets</h2>
+    <span style="color:#8E8E9A;font-size:16px">24px grid · 1.5px stroke · round caps and joins · currentColor. Files in icons/ named icon-*.svg.</span>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px">
+    <sc-for list="{{ iconGroups }}" as="g" hint-placeholder-count="5">
+      <div style="padding:28px;border-radius:24px;background:#111116;border:1px solid rgba(255,255,255,.08);box-shadow:inset 0 1px 0 rgba(255,255,255,.05);display:flex;flex-direction:column;gap:20px">
+        <span style="font-size:12px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:#8E8E9A">{{ g.title }}</span>
+        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(132px,1fr));gap:8px">
+          <sc-for list="{{ g.items }}" as="it" hint-placeholder-count="6">
+            <div style="height:112px;border-radius:16px;background:#1A1A21;border:1px solid rgba(255,255,255,.05);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;transition:background .4s cubic-bezier(.22,1,.36,1)" style-hover="background:#24242D">
+              <img src="icons/icon-{{ it }}.svg" width="24" height="24" style="filter:invert(.96)">
+              <span style="font-family:'JetBrains Mono';font-size:10.5px;color:#8E8E9A">icon-{{ it }}</span>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </sc-for>
+  </div>
+
+  <div style="display:grid;grid-template-columns:4fr 3fr 5fr;gap:24px">
+    <div style="padding:28px;border-radius:24px;background:#111116;border:1px solid rgba(255,255,255,.08);display:flex;flex-direction:column;gap:20px">
+      <span style="font-size:12px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:#8E8E9A">Folder &amp; tag · default / selected</span>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px">
+        <div style="display:flex;flex-direction:column;gap:4px">
+          <div style="display:flex;align-items:center;gap:12px;height:44px;padding:0 14px;border-radius:14px;font-size:14px;color:#8E8E9A"><img src="icons/icon-folder.svg" width="20" height="20" style="filter:invert(.6)">Personal</div>
+          <div style="display:flex;align-items:center;gap:12px;height:44px;padding:0 14px;border-radius:14px;font-size:14px;color:#F5F5F7;background:#1A1A21;border:1px solid rgba(232,213,163,.2);box-shadow:inset 0 1px 0 rgba(255,255,255,.05)"><span style="width:20px;height:20px;background:linear-gradient(135deg,#E8D5A3,#B8956A);mask:url(icons/icon-folder-selected.svg) center/20px no-repeat;-webkit-mask:url(icons/icon-folder-selected.svg) center/20px no-repeat"></span>Work</div>
+          <span style="font-family:'JetBrains Mono';font-size:10.5px;color:#5E5E69;padding:8px 14px 0">icon-folder / icon-folder-selected</span>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:4px">
+          <div style="display:flex;align-items:center;gap:12px;height:44px;padding:0 14px;border-radius:14px;font-size:14px;color:#8E8E9A"><img src="icons/icon-tag.svg" width="20" height="20" style="filter:invert(.6)">drafts</div>
+          <div style="display:flex;align-items:center;gap:12px;height:44px;padding:0 14px;border-radius:14px;font-size:14px;color:#F5F5F7;background:#1A1A21;border:1px solid rgba(232,213,163,.2);box-shadow:inset 0 1px 0 rgba(255,255,255,.05)"><span style="width:20px;height:20px;background:linear-gradient(135deg,#E8D5A3,#B8956A);mask:url(icons/icon-tag-selected.svg) center/20px no-repeat;-webkit-mask:url(icons/icon-tag-selected.svg) center/20px no-repeat"></span>ideas</div>
+          <span style="font-family:'JetBrains Mono';font-size:10.5px;color:#5E5E69;padding:8px 14px 0">icon-tag / icon-tag-selected</span>
+        </div>
+      </div>
+    </div>
+    <div style="padding:28px;border-radius:24px;background:#111116;border:1px solid rgba(255,255,255,.08);display:flex;flex-direction:column;gap:20px">
+      <span style="font-size:12px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:#8E8E9A">Construction · 24px grid</span>
+      <div style="align-self:center;position:relative;width:192px;height:192px;border-radius:8px;background-color:#1A1A21;background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);background-size:8px 8px">
+        <div style="position:absolute;inset:16px;border:1px dashed rgba(232,213,163,.35)"></div>
+        <img src="icons/icon-new-note.svg" width="192" height="192" style="position:absolute;inset:0;filter:invert(.96)">
+      </div>
+      <span style="font-family:'JetBrains Mono';font-size:10.5px;color:#5E5E69;text-align:center">2px live-area inset · shown at 8×</span>
+    </div>
+    <div style="padding:28px;border-radius:24px;background:#111116;border:1px solid rgba(255,255,255,.08);display:flex;flex-direction:column;gap:24px">
+      <span style="font-size:12px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:#8E8E9A">Favicon &amp; app icons · assets/</span>
+      <div style="display:flex;align-items:center;gap:10px;height:40px;width:260px;padding:0 14px;border-radius:12px 12px 0 0;background:#24242D;font-size:13px">
+        <img src="assets/favicon-16.png" width="16" height="16"><span style="flex:1">Stay Ahead</span><img src="icons/icon-close.svg" width="14" height="14" style="filter:invert(.6)">
+      </div>
+      <div style="display:flex;align-items:flex-end;gap:24px;flex-wrap:wrap">
+        <div style="display:flex;flex-direction:column;align-items:center;gap:8px"><img src="assets/favicon-16.png" width="16" height="16"><span style="font-family:'JetBrains Mono';font-size:10.5px;color:#8E8E9A">16</span></div>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:8px"><img src="assets/favicon-32.png" width="32" height="32"><span style="font-family:'JetBrains Mono';font-size:10.5px;color:#8E8E9A">32</span></div>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:8px"><img src="assets/apple-touch-icon-180.png" width="90" height="90" style="border-radius:20px"><span style="font-family:'JetBrains Mono';font-size:10.5px;color:#8E8E9A">180 apple</span></div>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:8px"><img src="assets/pwa-icon-192.png" width="96" height="96"><span style="font-family:'JetBrains Mono';font-size:10.5px;color:#8E8E9A">192 pwa</span></div>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:8px"><img src="assets/pwa-icon-512.png" width="128" height="128"><span style="font-family:'JetBrains Mono';font-size:10.5px;color:#8E8E9A">512 pwa</span></div>
+        <div style="display:flex;flex-direction:column;align-items:center;gap:8px"><img src="assets/pwa-icon-maskable-512.png" width="128" height="128" style="border-radius:50%"><span style="font-family:'JetBrains Mono';font-size:10.5px;color:#8E8E9A">512 maskable</span></div>
+      </div>
+      <span style="font-family:'JetBrains Mono';font-size:10.5px;color:#5E5E69">Shown at 50%. Maskable keeps the symbol inside the 80% safe zone. manifest.webmanifest included.</span>
+    </div>
+  </div>
+</section>
+
+<!-- 05 SYSTEM -->
+<section data-screen-label="05 Design system" style="display:flex;flex-direction:column;gap:24px">
+  <div style="display:flex;align-items:baseline;gap:20px;border-top:1px solid rgba(255,255,255,.08);padding-top:32px;margin-bottom:24px">
+    <span style="font-family:'JetBrains Mono';font-size:14px;color:#B8956A">05</span>
+    <h2 style="font-family:Sora;font-weight:600;font-size:44px;letter-spacing:-0.04em;margin:0">Design system snapshot</h2>
+  </div>
+
+  <div style="padding:32px;border-radius:24px;background:#111116;border:1px solid rgba(255,255,255,.08);display:flex;flex-direction:column;gap:24px">
+    <span style="font-size:12px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:#8E8E9A">Color</span>
+    <div style="display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:16px">
+      <div style="display:flex;flex-direction:column;gap:10px"><div style="height:112px;border-radius:18px;background:#0B0B0F;border:1px solid rgba(255,255,255,.08)"></div><span style="font-size:14px;font-weight:600">Background</span><span style="font-family:'JetBrains Mono';font-size:11px;color:#8E8E9A">--sa-bg · #0B0B0F</span></div>
+      <div style="display:flex;flex-direction:column;gap:10px"><div style="height:112px;border-radius:18px;background:#111116;border:1px solid rgba(255,255,255,.08)"></div><span style="font-size:14px;font-weight:600">Background raised</span><span style="font-family:'JetBrains Mono';font-size:11px;color:#8E8E9A">--sa-bg-raised · #111116</span></div>
+      <div style="display:flex;flex-direction:column;gap:10px"><div style="height:112px;border-radius:18px;background:#1A1A21;box-shadow:inset 0 1px 0 rgba(255,255,255,.06)"></div><span style="font-size:14px;font-weight:600">Surface</span><span style="font-family:'JetBrains Mono';font-size:11px;color:#8E8E9A">--sa-surface · #1A1A21</span></div>
+      <div style="display:flex;flex-direction:column;gap:10px"><div style="height:112px;border-radius:18px;background:#24242D;box-shadow:inset 0 1px 0 rgba(255,255,255,.06)"></div><span style="font-size:14px;font-weight:600">Surface 2</span><span style="font-family:'JetBrains Mono';font-size:11px;color:#8E8E9A">--sa-surface-2 · #24242D</span></div>
+      <div style="display:flex;flex-direction:column;gap:10px"><div style="height:112px;border-radius:18px;background:#0B0B0F;border:1px solid rgba(255,255,255,.1);box-shadow:inset 0 0 0 12px #0B0B0F,inset 0 0 0 13px rgba(255,255,255,.08)"></div><span style="font-size:14px;font-weight:600">Border</span><span style="font-family:'JetBrains Mono';font-size:11px;color:#8E8E9A">--sa-border · white 8% / 12%</span></div>
+      <div style="display:flex;flex-direction:column;gap:10px"><div style="height:112px;border-radius:18px;background:linear-gradient(135deg,#E8D5A3,#B8956A)"></div><span style="font-size:14px;font-weight:600">Accent</span><span style="font-family:'JetBrains Mono';font-size:11px;color:#8E8E9A">--sa-accent · #E8D5A3 → #B8956A</span></div>
+      <div style="display:flex;flex-direction:column;gap:10px"><div style="height:72px;border-radius:18px;background:#F5F5F7"></div><span style="font-size:14px;font-weight:600">Text</span><span style="font-family:'JetBrains Mono';font-size:11px;color:#8E8E9A">--sa-text · #F5F5F7</span></div>
+      <div style="display:flex;flex-direction:column;gap:10px"><div style="height:72px;border-radius:18px;background:#8E8E9A"></div><span style="font-size:14px;font-weight:600">Text muted</span><span style="font-family:'JetBrains Mono';font-size:11px;color:#8E8E9A">--sa-text-muted · #8E8E9A</span></div>
+      <div style="display:flex;flex-direction:column;gap:10px"><div style="height:72px;border-radius:18px;background:#5E5E69"></div><span style="font-size:14px;font-weight:600">Text faint</span><span style="font-family:'JetBrains Mono';font-size:11px;color:#8E8E9A">--sa-text-faint · #5E5E69 (meta only)</span></div>
+      <div style="display:flex;flex-direction:column;gap:10px"><div style="height:72px;border-radius:18px;background:#D4BA88"></div><span style="font-size:14px;font-weight:600">Accent solid</span><span style="font-family:'JetBrains Mono';font-size:11px;color:#8E8E9A">--sa-accent-solid · #D4BA88</span></div>
+      <div style="display:flex;flex-direction:column;gap:10px"><div style="height:72px;border-radius:18px;background:#E5675C"></div><span style="font-size:14px;font-weight:600">Danger</span><span style="font-family:'JetBrains Mono';font-size:11px;color:#8E8E9A">--sa-danger · #E5675C</span></div>
+      <div style="display:flex;flex-direction:column;gap:10px"><div style="height:72px;border-radius:18px;background:#6CC59B"></div><span style="font-size:14px;font-weight:600">Success</span><span style="font-family:'JetBrains Mono';font-size:11px;color:#8E8E9A">--sa-success · #6CC59B</span></div>
+    </div>
+  </div>
+
+  <div style="display:grid;grid-template-columns:7fr 5fr;gap:24px">
+    <div style="padding:32px;border-radius:24px;background:#111116;border:1px solid rgba(255,255,255,.08);display:flex;flex-direction:column;gap:8px">
+      <span style="font-size:12px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:#8E8E9A;margin-bottom:16px">Type · Sora (headings) / Instrument Sans (body)</span>
+      <div style="display:grid;grid-template-columns:200px 1fr;align-items:baseline;gap:24px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.06)"><span style="font-family:'JetBrains Mono';font-size:11px;color:#8E8E9A">Display · 72/72 · 700 · −4.5%</span><span style="font-family:Sora;font-weight:700;font-size:72px;line-height:1;letter-spacing:-0.045em">Stay ahead</span></div>
+      <div style="display:grid;grid-template-columns:200px 1fr;align-items:baseline;gap:24px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.06)"><span style="font-family:'JetBrains Mono';font-size:11px;color:#8E8E9A">H1 · 48/52 · 600 · −4%</span><span style="font-family:Sora;font-weight:600;font-size:48px;line-height:1.08;letter-spacing:-0.04em">Q4 planning</span></div>
+      <div style="display:grid;grid-template-columns:200px 1fr;align-items:baseline;gap:24px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.06)"><span style="font-family:'JetBrains Mono';font-size:11px;color:#8E8E9A">H2 · 32/38 · 600 · −3%</span><span style="font-family:Sora;font-weight:600;font-size:32px;line-height:1.2;letter-spacing:-0.03em">All notes</span></div>
+      <div style="display:grid;grid-template-columns:200px 1fr;align-items:baseline;gap:24px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.06)"><span style="font-family:'JetBrains Mono';font-size:11px;color:#8E8E9A">H3 · 22/28 · 600 · −2%</span><span style="font-family:Sora;font-weight:600;font-size:22px;line-height:1.3;letter-spacing:-0.02em">Open questions</span></div>
+      <div style="display:grid;grid-template-columns:200px 1fr;align-items:baseline;gap:24px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.06)"><span style="font-family:'JetBrains Mono';font-size:11px;color:#8E8E9A">Body L · 18/28 · 400</span><span style="font-size:18px;line-height:28px">Draft the roadmap review before Thursday.</span></div>
+      <div style="display:grid;grid-template-columns:200px 1fr;align-items:baseline;gap:24px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.06)"><span style="font-family:'JetBrains Mono';font-size:11px;color:#8E8E9A">Body · 16/24 · 400</span><span style="font-size:16px;line-height:24px">Everything stays on this device.</span></div>
+      <div style="display:grid;grid-template-columns:200px 1fr;align-items:baseline;gap:24px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.06)"><span style="font-family:'JetBrains Mono';font-size:11px;color:#8E8E9A">Small · 14/20 · 400–500</span><span style="font-size:14px;line-height:20px;color:#8E8E9A">Work · Edited 2 minutes ago</span></div>
+      <div style="display:grid;grid-template-columns:200px 1fr;align-items:baseline;gap:24px;padding:14px 0"><span style="font-family:'JetBrains Mono';font-size:11px;color:#8E8E9A">Caption · 12/16 · 500 · +12%</span><span style="font-size:12px;line-height:16px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:#8E8E9A">Folders</span></div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:24px">
+      <div style="padding:32px;border-radius:24px;background:#111116;border:1px solid rgba(255,255,255,.08);display:flex;flex-direction:column;gap:20px">
+        <span style="font-size:12px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:#8E8E9A">Spacing · 4px base</span>
+        <div style="display:flex;align-items:flex-end;gap:18px">
+          <div style="display:flex;flex-direction:column;align-items:center;gap:8px"><div style="width:4px;height:4px;background:#D4BA88;border-radius:1px"></div><span style="font-family:'JetBrains Mono';font-size:11px;color:#8E8E9A">4</span></div>
+          <div style="display:flex;flex-direction:column;align-items:center;gap:8px"><div style="width:8px;height:8px;background:#D4BA88;border-radius:2px"></div><span style="font-family:'JetBrains Mono';font-size:11px;color:#8E8E9A">8</span></div>
+          <div style="display:flex;flex-direction:column;align-items:center;gap:8px"><div style="width:12px;height:12px;background:#D4BA88;border-radius:3px"></div><span style="font-family:'JetBrains Mono';font-size:11px;color:#8E8E9A">12</span></div>
+          <div style="display:flex;flex-direction:column;align-items:center;gap:8px"><div style="width:16px;height:16px;background:#D4BA88;border-radius:4px"></div><span style="font-family:'JetBrains Mono';font-size:11px;color:#8E8E9A">16</span></div>
+          <div style="display:flex;flex-direction:column;align-items:center;gap:8px"><div style="width:24px;height:24px;background:#D4BA88;border-radius:5px"></div><span style="font-family:'JetBrains Mono';font-size:11px;color:#8E8E9A">24</span></div>
+          <div style="display:flex;flex-direction:column;align-items:center;gap:8px"><div style="width:32px;height:32px;background:#D4BA88;border-radius:6px"></div><span style="font-family:'JetBrains Mono';font-size:11px;color:#8E8E9A">32</span></div>
+          <div style="display:flex;flex-direction:column;align-items:center;gap:8px"><div style="width:48px;height:48px;background:#D4BA88;border-radius:8px"></div><span style="font-family:'JetBrains Mono';font-size:11px;color:#8E8E9A">48</span></div>
+          <div style="display:flex;flex-direction:column;align-items:center;gap:8px"><div style="width:64px;height:64px;background:#D4BA88;border-radius:10px"></div><span style="font-family:'JetBrains Mono';font-size:11px;color:#8E8E9A">64</span></div>
+          <div style="display:flex;flex-direction:column;align-items:center;gap:8px"><div style="width:96px;height:96px;background:#D4BA88;border-radius:12px"></div><span style="font-family:'JetBrains Mono';font-size:11px;color:#8E8E9A">96</span></div>
+        </div>
+      </div>
+      <div style="padding:32px;border-radius:24px;background:#111116;border:1px solid rgba(255,255,255,.08);display:flex;flex-direction:column;gap:20px">
+        <span style="font-size:12px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:#8E8E9A">Radius &amp; motion</span>
+        <div style="display:flex;gap:14px;align-items:flex-end">
+          <div style="display:flex;flex-direction:column;align-items:center;gap:8px"><div style="width:64px;height:64px;border-radius:12px;background:#24242D;box-shadow:inset 0 1px 0 rgba(255,255,255,.08)"></div><span style="font-family:'JetBrains Mono';font-size:11px;color:#8E8E9A">12 chip</span></div>
+          <div style="display:flex;flex-direction:column;align-items:center;gap:8px"><div style="width:64px;height:64px;border-radius:16px;background:#24242D;box-shadow:inset 0 1px 0 rgba(255,255,255,.08)"></div><span style="font-family:'JetBrains Mono';font-size:11px;color:#8E8E9A">16 input</span></div>
+          <div style="display:flex;flex-direction:column;align-items:center;gap:8px"><div style="width:64px;height:64px;border-radius:20px;background:#24242D;box-shadow:inset 0 1px 0 rgba(255,255,255,.08)"></div><span style="font-family:'JetBrains Mono';font-size:11px;color:#8E8E9A">20 card</span></div>
+          <div style="display:flex;flex-direction:column;align-items:center;gap:8px"><div style="width:64px;height:64px;border-radius:24px;background:#24242D;box-shadow:inset 0 1px 0 rgba(255,255,255,.08)"></div><span style="font-family:'JetBrains Mono';font-size:11px;color:#8E8E9A">24 panel</span></div>
+          <div style="display:flex;flex-direction:column;align-items:center;gap:8px"><div style="width:96px;height:40px;border-radius:999px;background:#24242D;box-shadow:inset 0 1px 0 rgba(255,255,255,.08)"></div><span style="font-family:'JetBrains Mono';font-size:11px;color:#8E8E9A">pill</span></div>
+        </div>
+        <span style="font-family:'JetBrains Mono';font-size:11px;color:#8E8E9A;line-height:1.7">--sa-ease cubic-bezier(.22, 1, .36, 1) · 240ms hover · 400ms panels · 700ms page</span>
+      </div>
+    </div>
+  </div>
+
+  <div style="display:grid;grid-template-columns:5fr 7fr;gap:24px">
+    <div style="padding:32px;border-radius:24px;background:#111116;border:1px solid rgba(255,255,255,.08);display:flex;flex-direction:column;gap:24px">
+      <span style="font-size:12px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:#8E8E9A">Buttons · default / with icon / disabled</span>
+      <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap">
+        <div style="width:88px;font-family:'JetBrains Mono';font-size:11px;color:#8E8E9A">Primary</div>
+        <div style="height:48px;padding:0 24px;display:flex;align-items:center;border-radius:16px;background:linear-gradient(135deg,#E8D5A3,#B8956A);color:#16130D;font-weight:600;font-size:15px;box-shadow:inset 0 1px 0 rgba(255,255,255,.45);cursor:pointer;transition:filter .24s cubic-bezier(.22,1,.36,1)" style-hover="filter:brightness(1.06)">Start writing</div>
+        <div style="height:48px;padding:0 20px;display:flex;align-items:center;gap:8px;border-radius:16px;background:linear-gradient(135deg,#E8D5A3,#B8956A);color:#16130D;font-weight:600;font-size:15px;box-shadow:inset 0 1px 0 rgba(255,255,255,.45)"><img src="icons/icon-new-note.svg" width="18" height="18">New note</div>
+        <div style="height:48px;padding:0 24px;display:flex;align-items:center;border-radius:16px;background:#24242D;color:#5E5E69;font-weight:600;font-size:15px">Start writing</div>
+      </div>
+      <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap">
+        <div style="width:88px;font-family:'JetBrains Mono';font-size:11px;color:#8E8E9A">Secondary</div>
+        <div style="height:48px;padding:0 24px;display:flex;align-items:center;border-radius:16px;border:1px solid rgba(255,255,255,.14);color:#F5F5F7;font-weight:500;font-size:15px;box-shadow:inset 0 1px 0 rgba(255,255,255,.05);cursor:pointer;transition:border-color .24s cubic-bezier(.22,1,.36,1)" style-hover="border-color:rgba(232,213,163,.5)">Import a backup</div>
+        <div style="height:48px;padding:0 20px;display:flex;align-items:center;gap:8px;border-radius:16px;border:1px solid rgba(255,255,255,.14);color:#F5F5F7;font-weight:500;font-size:15px"><img src="icons/icon-export.svg" width="18" height="18" style="filter:invert(.96)">Export</div>
+        <div style="height:48px;padding:0 24px;display:flex;align-items:center;border-radius:16px;border:1px solid rgba(255,255,255,.06);color:#5E5E69;font-weight:500;font-size:15px">Export</div>
+      </div>
+      <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap">
+        <div style="width:88px;font-family:'JetBrains Mono';font-size:11px;color:#8E8E9A">Ghost</div>
+        <div style="height:48px;padding:0 20px;display:flex;align-items:center;border-radius:16px;color:#8E8E9A;font-weight:500;font-size:15px;cursor:pointer;transition:background .24s cubic-bezier(.22,1,.36,1),color .24s" style-hover="background:#1A1A21;color:#F5F5F7">Cancel</div>
+        <div style="height:48px;padding:0 20px;display:flex;align-items:center;gap:8px;border-radius:16px;background:#1A1A21;color:#F5F5F7;font-weight:500;font-size:15px"><img src="icons/icon-share.svg" width="18" height="18" style="filter:invert(.96)">Share <span style="font-family:'JetBrains Mono';font-size:10px;color:#5E5E69">hover</span></div>
+        <div style="height:48px;padding:0 20px;display:flex;align-items:center;border-radius:16px;color:#5E5E69;font-weight:500;font-size:15px">Cancel</div>
+      </div>
+      <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap">
+        <div style="width:88px;font-family:'JetBrains Mono';font-size:11px;color:#8E8E9A">Danger</div>
+        <div style="height:48px;padding:0 20px;display:flex;align-items:center;gap:8px;border-radius:16px;border:1px solid rgba(229,103,92,.35);color:#E5675C;font-weight:500;font-size:15px"><img src="icons/icon-delete.svg" width="18" height="18" style="filter:invert(56%) sepia(60%) saturate(1500%) hue-rotate(330deg)">Delete note</div>
+      </div>
+    </div>
+    <div style="padding:32px;border-radius:24px;background:#111116;border:1px solid rgba(255,255,255,.08);display:flex;flex-direction:column;gap:24px">
+      <span style="font-size:12px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:#8E8E9A">Cards &amp; inputs</span>
+      <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px">
+        <div style="padding:20px;border-radius:20px;background:#1A1A21;border:1px solid rgba(255,255,255,.08);box-shadow:inset 0 1px 0 rgba(255,255,255,.06);display:flex;flex-direction:column;gap:8px"><span style="font-weight:600;font-size:16px">Reading list</span><span style="font-size:14px;line-height:1.5;color:#8E8E9A">The Overstory, Thinking in Systems, and a few essays on attention.</span><span style="font-size:12px;color:#5E5E69;margin-top:4px">Note card · default</span></div>
+        <div style="padding:20px;border-radius:20px;background:#1A1A21;border:1px solid rgba(232,213,163,.28);box-shadow:inset 0 1px 0 rgba(255,255,255,.06),0 0 0 4px rgba(232,213,163,.05);display:flex;flex-direction:column;gap:8px"><span style="display:flex;justify-content:space-between;font-weight:600;font-size:16px">Q4 planning<img src="icons/icon-pin.svg" width="16" height="16" style="filter:invert(.6)"></span><span style="font-size:14px;line-height:1.5;color:#8E8E9A">Draft the roadmap review and collect open questions before Thursday.</span><span style="font-size:12px;color:#5E5E69;margin-top:4px">Note card · selected, pinned</span></div>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 16px">
+        <div style="display:flex;flex-direction:column;gap:8px"><span style="font-size:13px;color:#8E8E9A">Default</span><div style="height:48px;padding:0 16px;display:flex;align-items:center;gap:10px;border-radius:16px;background:#1A1A21;border:1px solid rgba(255,255,255,.08);font-size:15px;color:#5E5E69"><img src="icons/icon-search.svg" width="18" height="18" style="filter:invert(.6)">Search notes</div></div>
+        <div style="display:flex;flex-direction:column;gap:8px"><span style="font-size:13px;color:#8E8E9A">Focus</span><div style="height:48px;padding:0 16px;display:flex;align-items:center;gap:10px;border-radius:16px;background:#1A1A21;border:1px solid rgba(232,213,163,.5);box-shadow:0 0 0 4px rgba(232,213,163,.08);font-size:15px;color:#F5F5F7"><img src="icons/icon-search.svg" width="18" height="18" style="filter:invert(.96)">roadmap<span style="width:1.5px;height:18px;background:#E8D5A3;margin-left:-8px"></span></div></div>
+        <div style="display:flex;flex-direction:column;gap:8px"><span style="font-size:13px;color:#8E8E9A">Folder name</span><div style="height:48px;padding:0 16px;display:flex;align-items:center;border-radius:16px;background:#1A1A21;border:1px solid rgba(255,255,255,.08);font-size:15px;color:#F5F5F7">Reading</div></div>
+        <div style="display:flex;flex-direction:column;gap:8px"><span style="font-size:13px;color:#8E8E9A">Error</span><div style="height:48px;padding:0 16px;display:flex;align-items:center;border-radius:16px;background:#1A1A21;border:1px solid rgba(229,103,92,.55);font-size:15px;color:#F5F5F7">Work</div><span style="font-size:13px;color:#E5675C;display:flex;align-items:center;gap:6px">A folder with this name already exists.</span></div>
+      </div>
+      <div style="display:flex;align-items:center;gap:12px;padding:14px 16px;border-radius:16px;background:#1A1A21;border:1px solid rgba(255,255,255,.08);box-shadow:inset 0 1px 0 rgba(255,255,255,.05)">
+        <img src="icons/icon-storage-warning.svg" width="20" height="20" style="filter:invert(.85) sepia(.5) saturate(2) hue-rotate(5deg)">
+        <span style="flex:1;font-size:14px">Local storage is 92% full. Export a backup to free space.</span>
+        <span style="font-size:14px;font-weight:600;color:#E8D5A3">Export</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;splashSeconds&quot;:{&quot;editor&quot;:&quot;range&quot;,&quot;default&quot;:7,&quot;min&quot;:4,&quot;max&quot;:12,&quot;step&quot;:1,&quot;unit&quot;:&quot;s&quot;,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Splash&quot;},&quot;glow&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Splash&quot;}}">
+class Component extends DCLogic {
+  groups = [
+    { title: 'Navigation', items: ['new-note','search','folders','tags','pin','settings','menu'] },
+    { title: 'Editor toolbar', items: ['bold','italic','heading','bullet-list','numbered-list','code','link','image','undo','redo'] },
+    { title: 'Actions', items: ['save','delete','export','import','share','copy','sort','filter','close','more'] },
+    { title: 'States', items: ['saved','unsaved','storage-warning','empty-state','error'] },
+    { title: 'Folder & tag', items: ['folder','folder-selected','tag','tag-selected'] },
+  ];
+  splash(m, dur, glow) {
+    const h = React.createElement, s = m ? 60 : 76;
+    const a = n => `${n} ${dur} cubic-bezier(.22,1,.36,1) infinite`;
+    const mask = 'url(assets/logo-mask.svg)';
+    return h('div', { style: { position: 'absolute', inset: 0, zIndex: 2, background: '#0B0B0F', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', animation: `saOverlay ${dur} ease-in-out infinite` } },
+      glow && h('div', { style: { position: 'absolute', left: '50%', top: '50%', width: m ? 560 : 960, height: m ? 560 : 960, marginLeft: m ? -280 : -480, marginTop: m ? -280 : -480, borderRadius: '50%', background: 'radial-gradient(closest-side, rgba(232,213,163,.14), rgba(184,149,106,.05) 55%, rgba(11,11,15,0))', animation: a('saGlow') } }),
+      h('div', { style: { position: 'relative', display: 'flex', flexDirection: m ? 'column' : 'row', alignItems: 'center', gap: m ? 20 : 24, animation: a('saLogoIn') } },
+        h('div', { style: { position: 'relative', width: s, height: s } },
+          h('img', { src: 'assets/logo-symbol-gold.svg', width: s, height: s, style: { display: 'block' } }),
+          h('div', { style: { position: 'absolute', inset: 0, overflow: 'hidden', maskImage: mask, WebkitMaskImage: mask, maskSize: '100% 100%', WebkitMaskSize: '100% 100%' } },
+            h('div', { style: { position: 'absolute', top: '-30%', bottom: '-30%', left: 0, width: '45%', background: 'linear-gradient(90deg, rgba(255,248,230,0), rgba(255,248,230,.7), rgba(255,248,230,0))', animation: a('saSweep') } }))),
+        h('div', { style: { fontFamily: 'Sora', fontWeight: 600, fontSize: m ? 32 : 46, lineHeight: 1.1, letterSpacing: '-0.045em', background: 'linear-gradient(100deg,#E8D5A3 0%,#B8956A 38%,#FFF5DA 50%,#B8956A 62%,#E8D5A3 100%)', backgroundSize: '300% 100%', WebkitBackgroundClip: 'text', backgroundClip: 'text', color: 'transparent', animation: a('saShimmer') } }, 'Stay Ahead')),
+      h('div', { style: { position: 'relative', marginTop: m ? 16 : 28, fontFamily: "'Instrument Sans'", fontSize: m ? 15 : 16, color: '#8E8E9A', animation: a('saTag') } }, 'Your notes, quietly organized.'));
+  }
+  renderVals() {
+    const dur = (this.props.splashSeconds ?? 7) + 's';
+    const glow = this.props.glow ?? true;
+    return { iconGroups: this.groups, splashDesktop: this.splash(false, dur, glow), splashMobile: this.splash(true, dur, glow) };
+  }
+}
+</script>
+</body>
+</html>
