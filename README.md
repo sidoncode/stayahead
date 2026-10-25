@@ -2,6 +2,8 @@
 
 A focused notebook in your browser. Notes live on your device (localStorage). There is no account and no backend.
 
+**Live app:** https://stayahead1.vercel.app/
+
 ## Features
 
 - Rich editor with Markdown shortcuts (`##`, `-`, `1.`, `**bold**`, `` `code` ``), links, images, undo/redo
@@ -23,6 +25,21 @@ npm run dev      # http://localhost:5173
 npm run build    # type-check + production build
 npm run lint
 ```
+
+## Deployment
+
+The app is a static Vite build hosted on [Vercel](https://vercel.com) at https://stayahead1.vercel.app/.
+
+| Setting          | Value           |
+| ---------------- | --------------- |
+| Framework preset | Vite            |
+| Install command  | `npm install`   |
+| Build command    | `npm run build` |
+| Output directory | `dist`          |
+
+To deploy your own copy, import the GitHub repo into Vercel with the settings above, or run `npx vercel` from the project folder. No environment variables are needed.
+
+Notes are stored in each visitor's own browser, per site address. They are not shared between devices, and a different address (for example a Vercel preview URL or `localhost`) starts empty. Use **Settings → Export** to move notes between them.
 
 ## Design assets
 
@@ -58,4 +75,5 @@ scripts/sync-brand-assets.mjs
 ## Notes
 
 - localStorage is capped at about 5 MB per browser, which is what the storage meter measures.
+- Clearing site data in the browser deletes your notes. Export a backup first.
 - The web manifest and icons are in place; there is no service worker yet, so the app is not available offline.
